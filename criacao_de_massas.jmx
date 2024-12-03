@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Geração de Massa no TDM">
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variaveis Utilizadas">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">USUARIO PARA GERAR TOKEN TDM</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="usuarioTDM" elementType="Argument">
+            <stringProp name="Argument.name">usuarioTDM</stringProp>
+            <stringProp name="Argument.value">m375806</stringProp>
+            <stringProp name="Argument.desc">Usuario TDM</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="senhaTDM" elementType="Argument">
+            <stringProp name="Argument.name">senhaTDM</stringProp>
+            <stringProp name="Argument.value">renan1020</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">                               </stringProp>
+            <stringProp name="Argument.desc">                               </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocolo" elementType="Argument">
+            <stringProp name="Argument.name">protocolo</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="porta" elementType="Argument">
+            <stringProp name="Argument.name">porta</stringProp>
+            <stringProp name="Argument.value">8443</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="qtdCPFs" elementType="Argument">
+            <stringProp name="Argument.name">qtdCPFs</stringProp>
+            <stringProp name="Argument.value">2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Quantidade de CPFs que será gerado no TDM</stringProp>
+          </elementProp>
+          <elementProp name="caminhoPastaDownload" elementType="Argument">
+            <stringProp name="Argument.name">caminhoPastaDownload</stringProp>
+            <stringProp name="Argument.value">C:/Users/2458916/Desktop</stringProp>
+            <stringProp name="Argument.desc">Caminho no qual será baixado o ZIP e criado o .TXT com os dados.</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="chaveM" elementType="Argument">
+            <stringProp name="Argument.name">chaveM</stringProp>
+            <stringProp name="Argument.value">m375806</stringProp>
+            <stringProp name="Argument.desc">Chave M utilizada nos ambientes Bradesco</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.desc">Opcional, caso queira receber os resultados dos JOBs</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">         </stringProp>
+            <stringProp name="Argument.desc">              </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">VARIAVEIS PARA CRIAÇÃO DE CPFs E CLUBs</stringProp>
+            <stringProp name="Argument.desc">    </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ambienteCadastroCpfEClub" elementType="Argument">
+            <stringProp name="Argument.name">ambienteCadastroCpfEClub</stringProp>
+            <stringProp name="Argument.value">1044</stringProp>
+            <stringProp name="Argument.desc">Ambiente que deseja fazer a requisição no TDM. TU=1044, TI=1045, NOVO TI=1046</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">                             </stringProp>
+            <stringProp name="Argument.desc">                             </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">VARIAVEIS PARA COLOCAR PRÉ APROVADO</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ambienteCadastroPreAprovado" elementType="Argument">
+            <stringProp name="Argument.name">ambienteCadastroPreAprovado</stringProp>
+            <stringProp name="Argument.value">816</stringProp>
+            <stringProp name="Argument.desc">Ambiente que deseja fazer a requisição no TDM. TU=816, TI=817, NOVO TI=943</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="p_mala" elementType="Argument">
+            <stringProp name="Argument.name">p_mala</stringProp>
+            <stringProp name="Argument.value">910008250</stringProp>
+            <stringProp name="Argument.desc">Mala de TU=910008250,TI, NOVO TI=3316</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="p_ValorLimitPreAprovado" elementType="Argument">
+            <stringProp name="Argument.name">p_ValorLimitPreAprovado</stringProp>
+            <stringProp name="Argument.value">40000</stringProp>
+            <stringProp name="Argument.desc">Valor do pre-aprovado que  desejar</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="origem" elementType="Argument">
+            <stringProp name="Argument.name">origem</stringProp>
+            <stringProp name="Argument.value">924</stringProp>
+            <stringProp name="Argument.desc">Origem de TU=924,TI, NOVO TI=924(Analise Online),499(Pré-aprovado manual)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">                            </stringProp>
+            <stringProp name="Argument.desc">                                 </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Argument">
+            <stringProp name="Argument.name"></stringProp>
+            <stringProp name="Argument.value">VARIAVEIS PARA CADASTRAR AGÊNCIA E CONTA</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ambienteCadastroAgenciaEConta" elementType="Argument">
+            <stringProp name="Argument.name">ambienteCadastroAgenciaEConta</stringProp>
+            <stringProp name="Argument.value">2388</stringProp>
+            <stringProp name="Argument.desc">Ambiente que deseja fazer a requisição no TDM. TU=2386, TI=2387, NOVO TI=2388</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ambienteCadastroGerarConta" elementType="Argument">
+            <stringProp name="Argument.name">ambienteCadastroGerarConta</stringProp>
+            <stringProp name="Argument.value">PCM2AB  - NOVO TI</stringProp>
+            <stringProp name="Argument.desc">Ambiente em que será gerada as contas. TU= &quot;PDB204P - TU&quot;/   TI= &quot;PDB208TI - TI&quot;/   NOVO TI = &quot;PCM2AB  - NOVO TI&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tpDispositivoSeguranca" elementType="Argument">
+            <stringProp name="Argument.name">tpDispositivoSeguranca</stringProp>
+            <stringProp name="Argument.value">TANCODE</stringProp>
+            <stringProp name="Argument.desc">Dispositivo de segurança que será cadastrado na conta. Se for tancode = &quot;TANCODE&quot;./ Se não optar=&quot;SEM DISPOSITIVO&quot;</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="p_agencia" elementType="Argument">
+            <stringProp name="Argument.name">p_agencia</stringProp>
+            <stringProp name="Argument.value">448</stringProp>
+            <stringProp name="Argument.desc">A631010 - AGENCIA 448 (espelho)
+A346005 - AGENCIA 448
+A346006 - AGENCIA 448
+
+A631011 - AGENCIA 2 (espelho)
+A346041 - AGENCIA 2
+A346042 - AGENCIA 2
+A346043 - AGENCIA 2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="segmento" elementType="Argument">
+            <stringProp name="Argument.name">segmento</stringProp>
+            <stringProp name="Argument.value">007-SUPER CLASSIC</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc"></stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Gerar Token TDM" enabled="true">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Gerar o Basic Auth" enabled="true">
+            <stringProp name="BeanShellSampler.query">import org.apache.commons.codec.binary.Base64;
+
+String username = &quot;${usuarioTDM}&quot;;
+String password = &quot;${senhaTDM}&quot;;
+
+// Concatena username e password com &quot;:&quot;
+String authString = username + &quot;:&quot; + password;
+
+// Codifica a string concatenada em Base64
+String authEncBytes = new String(Base64.encodeBase64(authString.getBytes()));
+String authStringEnc = &quot;Basic &quot; + authEncBytes;
+
+vars.put(&quot;authBasic&quot;, authStringEnc);
+
+// Armazena o valor codificado em uma variável JMeter
+log.info(&quot;BASIC AUTH - &quot; +  authEncBytes);</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">${authBasic}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login TDM" enabled="true">
+            <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+            <stringProp name="HTTPSampler.port">${porta}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/TestDataManager/user/login</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">authorization</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Scope.variable"></stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">0</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Colocar a variavel do token no contexto global" enabled="true">
+            <stringProp name="BeanShellSampler.query">String value = vars.get(&quot;authorization&quot;);
+
+props.put(&quot;authorization&quot;, value);
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cadastrar CPFs e Clubs" enabled="true">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">10</longProp>
+        <longProp name="ThreadGroup.delay">10</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Controlador de Uma Única Vez" enabled="true"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Recupera variaveis global e aplica no scopo" enabled="true">
+            <stringProp name="BeanShellSampler.query">String token = props.get(&quot;authorization&quot;);
+
+
+vars.put(&quot;authorization&quot;, token);
+
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${authorization}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Data atual em timeStamp e UTC - 0" enabled="true">
+            <stringProp name="BeanShellSampler.query">import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+ 
+Date dataAtual = new Date();
+ 
+long timestamp = dataAtual.getTime();
+SimpleDateFormat isoFormatter = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;&quot;);
+isoFormatter.setTimeZone(TimeZone.getTimeZone(&quot;UTC&quot;));
+String isoTimestamp = isoFormatter.format(dataAtual);
+
+//Define as variaveis no scopo
+vars.put(&quot;timestamp&quot;, String.valueOf(timestamp));
+vars.put(&quot;dateFormatUTC&quot;, isoTimestamp);
+vars.put(&quot;currentDay&quot;, String.valueOf(dataAtual.getDate()));
+vars.put(&quot;currentMonth&quot;, new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+vars.put(&quot;currentYear&quot;, new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+
+//Define as variaveis grobalmente
+props.put(&quot;timestamp&quot;, String.valueOf(timestamp));
+props.put(&quot;dateFormatUTC&quot;, isoTimestamp);
+props.put(&quot;currentDay&quot;, String.valueOf(dataAtual.getDate()));
+props.put(&quot;currentMonth&quot;, new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+props.put(&quot;currentYear&quot;, new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+
+log.info(&quot;DATAAAAAAAAAAAAAAAA - &quot; + String.valueOf(timestamp));
+log.info(&quot;Data e hora atual em UTC: &quot; + isoTimestamp); 
+log.info(&quot;Current  day: &quot; + dataAtual.getDate());
+log.info(&quot;Current  Month: &quot; +new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+log.info(&quot;Current  Year: &quot; + new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Limitar a quantidade de CPFs em 100" enabled="true">
+            <stringProp name="BeanShellSampler.query">String value = vars.get(&quot;qtdCPFs&quot;);
+log.info(&quot;Quantidade de CPFs - &quot; + value);
+
+if(Integer.valueOf(value) &gt; 100){
+	vars.put(&quot;qtdCPFs&quot;, String.valueOf(100));
+}
+
+log.info(&quot;Quantidade de CPFs - &quot; + vars.get(&quot;qtdCPFs&quot;));</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cadastrar CPF e CLUB" enabled="true">
+            <intProp name="HTTPSampler.concurrentPool">6</intProp>
+            <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+            <stringProp name="HTTPSampler.port">${porta}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/TDMDataFlowService/api/ca/v1/requests</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+   &quot;jobPubParams&quot;: {&#xd;
+      &quot;scheduledDateTimeInMillisec&quot;: &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;almjobs&quot;: [],&#xd;
+      &quot;rallyJobs&quot;: [],&#xd;
+      &quot;jobParams&quot;: [],&#xd;
+      &quot;publishJobs&quot;: [&#xd;
+         {&#xd;
+            &quot;batchEngineThread&quot;: &quot;ANY&quot;,&#xd;
+            &quot;dataSourceProfile&quot;: &quot;&quot;,&#xd;
+            &quot;dataTargetProfile&quot;: &quot;&quot;,&#xd;
+            &quot;description&quot;: &quot;&quot;,&#xd;
+            &quot;jobTitle&quot;: &quot;Group Job&quot;,&#xd;
+            &quot;levelID&quot;: 2967,&#xd;
+            &quot;publishVariables&quot;: [&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_projeto_jira&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;VLCRT-CARDTECH AGIL | Aquisicoes&quot;&#xd;
+               }&#xd;
+            ],&#xd;
+            &quot;seq&quot;: 1,&#xd;
+            &quot;vtfnodeDesc&quot;: &quot;******GERAR NO MAXIMO 25 CPFS POR VEZ********&quot;,&#xd;
+            &quot;vtfnodeID&quot;: &quot;950&quot;,&#xd;
+            &quot;vtfnodeName&quot;: &quot;GERAR NO MAXIMO 25 CPFS POR VEZ&quot;,&#xd;
+            &quot;iterations&quot;: ${qtdCPFs},&#xd;
+            &quot;configurationId&quot;: ${ambienteCadastroCpfEClub}&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;testMatches&quot;: [],&#xd;
+      &quot;exportJobs&quot;: [],&#xd;
+      &quot;scheduledDt&quot;:  &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;selfServiceEmailMandate&quot;: false,&#xd;
+      &quot;email&quot;: &quot;${email}&quot;,&#xd;
+      &quot;globalThreadName&quot;: &quot;ANY&quot;,&#xd;
+      &quot;scheduledDateTimeInMillis&quot;: ${timestamp},&#xd;
+      &quot;currentDay&quot;: ${currentDay},&#xd;
+      &quot;currentMonth&quot;: ${currentMonth},&#xd;
+      &quot;currentYear&quot;: ${currentYear},&#xd;
+      &quot;globalSourceConnection&quot;: &quot;&quot;,&#xd;
+      &quot;globalTargetConnection&quot;: &quot;&quot;,&#xd;
+      &quot;jobSubmissionOrder&quot;: &quot;0&quot;,&#xd;
+      &quot;jobTitle&quot;: &quot;Cadastro de Cliente PF V2 Data Request&quot;,&#xd;
+      &quot;username&quot;: &quot;${chaveM}&quot;&#xd;
+   },&#xd;
+   &quot;dataDesign&quot;: {&#xd;
+      &quot;projectID&quot;: 2956,&#xd;
+      &quot;versionID&quot;: 2957&#xd;
+   },&#xd;
+   &quot;advancedToggleFlag&quot;: true&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">numeroJobId</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.jobId</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable"></stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+            <stringProp name="WhileController.condition">${__javaScript(&quot;${statusJob}&quot;.equals(&quot;Completed&quot;) || &quot;${statusJob}&quot;.equals(&quot;Failed&quot;) ? false : true)}
+</stringProp>
+          </WhileController>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <url>true</url>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Obter Job ID para download" enabled="true">
+              <intProp name="HTTPSampler.concurrentPool">6</intProp>
+              <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+              <stringProp name="HTTPSampler.port">8443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/TDMJobService/api/ca/v1/jobs/${numeroJobId}</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">numeroJobIdDownload</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.jobs[0].jobId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                <stringProp name="Sample.scope">all</stringProp>
+                <stringProp name="Scope.variable"></stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">statusJob</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.status</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                <stringProp name="Sample.scope">all</stringProp>
+                <stringProp name="Scope.variable"></stringProp>
+                <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+                <stringProp name="JSON_PATH">$.status</stringProp>
+                <stringProp name="EXPECTED_VALUE">Failed</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">true</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+              </JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">3000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+              <boolProp name="displayJMeterProperties">false</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugSampler>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Download Arquivo ZIP com o club" enabled="true">
+            <intProp name="HTTPSampler.concurrentPool">6</intProp>
+            <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+            <stringProp name="HTTPSampler.port">${porta}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/TDMJobService/api/ca/v1/jobs/${numeroJobIdDownload}/actions/downloadArtifact</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <url>true</url>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+              <stringProp name="FileSaver.filename">${caminhoPastaDownload}/${numeroJobIdDownload}</stringProp>
+              <boolProp name="FileSaver.errorsonly">false</boolProp>
+              <boolProp name="FileSaver.successonly">true</boolProp>
+              <boolProp name="FileSaver.skipsuffix">false</boolProp>
+              <boolProp name="FileSaver.skipautonumber">true</boolProp>
+              <boolProp name="FileSaver.ignoreTC">false</boolProp>
+            </ResultSaver>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Preenche um txt com os CPFs e os Clubs" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.util.zip.ZipFile
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.file.Path
+import java.nio.file.StandardOpenOption
+
+def numeroJob = vars.get(&quot;numeroJobIdDownload&quot;);
+
+String zipFilePath = &quot;${caminhoPastaDownload}/${numeroJob}.zip&quot;
+String outputFilePath = &quot;${caminhoPastaDownload}/CPFs.txt&quot;
+
+// Abrindo o arquivo ZIP
+def zipFile = new ZipFile(new File(zipFilePath))
+
+StringBuilder outputData = new StringBuilder()
+
+// Iterando sobre as entradas do arquivo ZIP
+zipFile.entries().each { entry -&gt;
+    log.info(&quot;Entry name: ${entry.name}&quot;)
+    // Lendo o conteúdo de cada entrada (opcional)
+    def inputStream = zipFile.getInputStream(entry)
+    def content = new String(inputStream.bytes)
+
+	def cpf = (content =~/PSSOA_UNIC\s+CCPF_CNPJ\s+\d+\s+(\d+)/);
+	def digitoCpf = (content =~/PSSOA_UNIC\s+CCTRL_CPF_CNPJ\s+\d+\s+(\d+)/);
+	def club = (content =~/PSSOA_UNIC\s+CCLUB\s+\d+\s+(\d+)/);
+	
+
+	for(int i=0; i &lt; cpf.size(); i++){
+		String cpfValue = cpf[i][1];
+		String cpfFormatado = cpfValue.substring(0, 3) + &quot;.&quot; +
+                 cpfValue.substring(3, 6) + &quot;.&quot; +
+                 cpfValue.substring(6);
+                 
+		String digitoCpfValue = digitoCpf[i][1];
+		String clubValue = club[i][1];
+
+		outputData.append(&quot;${cpfFormatado}-${digitoCpfValue};${clubValue}\n&quot;);
+	}
+
+	log.info(&quot;LISTA -\n &quot; + outputData.toString())
+  
+}
+
+// Fechando o arquivo ZIP
+zipFile.close()
+
+if(new File(outputFilePath).exists()){
+	Files.write(Paths.get(outputFilePath), outputData.toString().getBytes(),StandardOpenOption.APPEND);
+}else{
+	Files.write(Paths.get(outputFilePath), outputData.toString().getBytes());
+}
+
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Colocar Pré-aprovado" enabled="true">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <longProp name="ThreadGroup.duration">600</longProp>
+        <longProp name="ThreadGroup.delay">5</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${qtdCPFs}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Configuração dos dados CSV" enabled="true">
+          <stringProp name="delimiter">;</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">${caminhoPastaDownload}/CPFs.txt</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="variableNames">cpf,club</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer ${authorization}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Recupera variaveis global e aplica no scopo" enabled="true">
+            <stringProp name="BeanShellSampler.query">String time = props.get(&quot;timestamp&quot;);
+String date = props.get(&quot;dateFormatUTC&quot;);
+String day = props.get(&quot;currentDay&quot;);
+String month = props.get(&quot;currentMonth&quot;);
+String year = props.get(&quot;currentYear&quot;);
+String token = props.get(&quot;authorization&quot;);
+
+vars.put(&quot;timestamp&quot;, time);
+vars.put(&quot;dateFormatUTC&quot;, date);
+vars.put(&quot;currentDay&quot;, day);
+vars.put(&quot;currentMonth&quot;, month);
+vars.put(&quot;currentYear&quot;,  year);
+vars.put(&quot;authorization&quot;, token);
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Colocar Pré-Aprovado" enabled="true">
+          <intProp name="HTTPSampler.concurrentPool">6</intProp>
+          <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+          <stringProp name="HTTPSampler.port">${porta}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/TDMDataFlowService/api/ca/v1/requests</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;jobPubParams&quot;: {&#xd;
+      &quot;scheduledDateTimeInMillisec&quot;: &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;almjobs&quot;: [],&#xd;
+      &quot;rallyJobs&quot;: [],&#xd;
+      &quot;jobParams&quot;: [],&#xd;
+      &quot;publishJobs&quot;: [&#xd;
+         {&#xd;
+            &quot;batchEngineThread&quot;: &quot;ANY&quot;,&#xd;
+            &quot;dataSourceProfile&quot;: &quot;&quot;,&#xd;
+            &quot;dataTargetProfile&quot;: &quot;&quot;,&#xd;
+            &quot;description&quot;: &quot;&quot;,&#xd;
+            &quot;jobTitle&quot;: &quot;Group Job&quot;,&#xd;
+            &quot;levelID&quot;: 3087,&#xd;
+            &quot;publishVariables&quot;: [&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_quantidade&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;1&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_cpf&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_cpf}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_cpf_ctrl&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_cpf_ctrl}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_mala&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_mala}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_ValorLimitPreAprovado&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_ValorLimitPreAprovado}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_ValorLimitCompra&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_ValorLimitPreAprovado}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_ValorLimitSaque&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_ValorLimitPreAprovado}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_CCLASS_VDA_CATAO&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${origem}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_projeto_jira&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;VLCRT-CARDTECH AGIL | Aquisicoes&quot;&#xd;
+               }&#xd;
+            ],&#xd;
+            &quot;seq&quot;: 1,&#xd;
+            &quot;vtfnodeDesc&quot;: &quot;Cadastro de crédito pré aprovado para cliente PF&quot;,&#xd;
+            &quot;vtfnodeID&quot;: &quot;590&quot;,&#xd;
+            &quot;vtfnodeName&quot;: &quot;Cadastro de crédito pré aprovado para cliente PF&quot;,&#xd;
+            &quot;iterations&quot;: 1,&#xd;
+            &quot;configurationId&quot;:  ${ambienteCadastroPreAprovado}&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;testMatches&quot;: [],&#xd;
+      &quot;exportJobs&quot;: [],&#xd;
+      &quot;scheduledDt&quot;: &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;selfServiceEmailMandate&quot;: false,&#xd;
+      &quot;email&quot;: &quot;${email}&quot;,&#xd;
+      &quot;globalThreadName&quot;: &quot;ANY&quot;,&#xd;
+      &quot;scheduledDateTimeInMillis&quot;: ${timestamp},&#xd;
+      &quot;currentDay&quot;: ${currentDay},&#xd;
+      &quot;currentMonth&quot;: ${currentMonth},&#xd;
+      &quot;currentYear&quot;: ${currentYear},&#xd;
+      &quot;globalSourceConnection&quot;: &quot;&quot;,&#xd;
+      &quot;globalTargetConnection&quot;: &quot;&quot;,&#xd;
+      &quot;jobSubmissionOrder&quot;: &quot;1&quot;,&#xd;
+      &quot;jobTitle&quot;: &quot;Cadastro de crédito pré aprovado para cliente PF Data Request&quot;,&#xd;
+      &quot;username&quot;: &quot;${chaveM}&quot;&#xd;
+   },&#xd;
+   &quot;dataDesign&quot;: {&#xd;
+      &quot;projectID&quot;: 2942,&#xd;
+      &quot;versionID&quot;: 2943&#xd;
+   },&#xd;
+   &quot;advancedToggleFlag&quot;: true&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Pega os valores do CPF" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String value = vars.get(&quot;cpf&quot;);
+
+vars.put(&quot;p_cpf&quot;, value.substring(0,value.length() - 3).replace(&quot;.&quot;,&quot;&quot;));
+vars.put(&quot;p_cpf_ctrl&quot;,value.substring(value.length() - 2));
+
+log.info(&quot;P_CPF = &quot; + value.substring(0,value.length() - 3).replace(&quot;.&quot;,&quot;&quot;));
+log.info(&quot;P_CPF-CTRL = &quot; + value.substring(value.length() - 2));
+</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">numeroJobId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.jobId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+            <stringProp name="Scope.variable"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">vars.put(&quot;statusJob&quot;,&quot;&quot;);</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+          <stringProp name="WhileController.condition">${__javaScript(&quot;${statusJob}&quot;.equals(&quot;Completed&quot;) || &quot;${statusJob}&quot;.equals(&quot;Failed&quot;) ? false : true)}
+</stringProp>
+        </WhileController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">1500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Verificando Job do Pré-aprovado" enabled="true">
+            <intProp name="HTTPSampler.concurrentPool">6</intProp>
+            <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+            <stringProp name="HTTPSampler.port">${porta}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/TDMJobService/api/ca/v1/jobs/${numeroJobId}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">statusJob</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.status</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable"></stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+              <stringProp name="JSON_PATH">$.status</stringProp>
+              <stringProp name="EXPECTED_VALUE">Failed</stringProp>
+              <boolProp name="JSONVALIDATION">true</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">true</boolProp>
+              <boolProp name="ISREGEX">false</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cadastrar Agência e Conta" enabled="false">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${qtdCPFs}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Configuração dos dados CSV" enabled="true">
+          <stringProp name="delimiter">;</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">${caminhoPastaDownload}/CPFs.txt</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="variableNames">cpf,club</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer ${authorization}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Data atual em timeStamp e UTC - 0" enabled="true">
+            <stringProp name="BeanShellSampler.query">import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+ 
+Date dataAtual = new Date();
+ 
+long timestamp = dataAtual.getTime();
+SimpleDateFormat isoFormatter = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;&quot;);
+isoFormatter.setTimeZone(TimeZone.getTimeZone(&quot;UTC&quot;));
+String isoTimestamp = isoFormatter.format(dataAtual);
+
+//Define as variaveis no scopo
+vars.put(&quot;timestamp&quot;, String.valueOf(timestamp));
+vars.put(&quot;dateFormatUTC&quot;, isoTimestamp);
+vars.put(&quot;currentDay&quot;, String.valueOf(dataAtual.getDate()));
+vars.put(&quot;currentMonth&quot;, new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+vars.put(&quot;currentYear&quot;, new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+
+//Define as variaveis grobalmente
+props.put(&quot;timestamp&quot;, String.valueOf(timestamp));
+props.put(&quot;dateFormatUTC&quot;, isoTimestamp);
+props.put(&quot;currentDay&quot;, String.valueOf(dataAtual.getDate()));
+props.put(&quot;currentMonth&quot;, new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+props.put(&quot;currentYear&quot;, new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+
+log.info(&quot;DATAAAAAAAAAAAAAAAA - &quot; + String.valueOf(timestamp));
+log.info(&quot;Data e hora atual em UTC: &quot; + isoTimestamp); 
+log.info(&quot;Current  day: &quot; + dataAtual.getDate());
+log.info(&quot;Current  Month: &quot; +new SimpleDateFormat(&quot;M&quot;).format(dataAtual));
+log.info(&quot;Current  Year: &quot; + new SimpleDateFormat(&quot;yyyy&quot;).format(dataAtual));
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Recupera variaveis global e aplica no scopo" enabled="true">
+            <stringProp name="BeanShellSampler.query">String time = props.get(&quot;timestamp&quot;);
+String date = props.get(&quot;dateFormatUTC&quot;);
+String day = props.get(&quot;currentDay&quot;);
+String month = props.get(&quot;currentMonth&quot;);
+String year = props.get(&quot;currentYear&quot;);
+String token = props.get(&quot;authorization&quot;);
+
+vars.put(&quot;timestamp&quot;, time);
+vars.put(&quot;dateFormatUTC&quot;, date);
+vars.put(&quot;currentDay&quot;, day);
+vars.put(&quot;currentMonth&quot;, month);
+vars.put(&quot;currentYear&quot;,  year);
+vars.put(&quot;authorization&quot;, token);
+</stringProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cadastrar Agência e Conta" enabled="true">
+          <intProp name="HTTPSampler.concurrentPool">6</intProp>
+          <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+          <stringProp name="HTTPSampler.port">${porta}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/TDMDataFlowService/api/ca/v1/requests</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;jobPubParams&quot;: {&#xd;
+      &quot;scheduledDateTimeInMillisec&quot;: &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;almjobs&quot;: [],&#xd;
+      &quot;rallyJobs&quot;: [],&#xd;
+      &quot;jobParams&quot;: [],&#xd;
+      &quot;publishJobs&quot;: [&#xd;
+         {&#xd;
+            &quot;batchEngineThread&quot;: &quot;ANY&quot;,&#xd;
+            &quot;dataSourceProfile&quot;: &quot;&quot;,&#xd;
+            &quot;dataTargetProfile&quot;: &quot;&quot;,&#xd;
+            &quot;description&quot;: &quot;&quot;,&#xd;
+            &quot;jobTitle&quot;: &quot;Group Job&quot;,&#xd;
+            &quot;levelID&quot;: 3309,&#xd;
+            &quot;publishVariables&quot;: [&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_SegmentoContaCorretePF&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${segmento}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_agencia&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_agencia}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_cpf&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${p_cpf}${p_cpf_ctrl}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_qtdcontas_ger&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;1&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_projeto_jira&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;VLCRT-CARDTECH AGIL | Aquisicoes&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_tp_disp&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${tpDispositivoSeguranca}&quot;&#xd;
+               },&#xd;
+               {&#xd;
+                  &quot;name&quot;: &quot;p_ambiente_gerar_conta&quot;,&#xd;
+                  &quot;preResolveError&quot;: &quot;&quot;,&#xd;
+                  &quot;preResolveValue&quot;: &quot;&quot;,&#xd;
+                  &quot;value&quot;: &quot;${ambienteCadastroGerarConta}&quot;&#xd;
+               }&#xd;
+            ],&#xd;
+            &quot;seq&quot;: 1,&#xd;
+            &quot;vtfnodeDesc&quot;: &quot;Abertura de conta PF&quot;,&#xd;
+            &quot;vtfnodeID&quot;: &quot;550&quot;,&#xd;
+            &quot;vtfnodeName&quot;: &quot;Abertura de conta PF  ***(As Novas Contas já Saem Associadas com Tancode)***&quot;,&#xd;
+            &quot;iterations&quot;: 1,&#xd;
+            &quot;configurationId&quot;: ${ambienteCadastroAgenciaEConta}&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;testMatches&quot;: [],&#xd;
+      &quot;exportJobs&quot;: [],&#xd;
+      &quot;scheduledDt&quot;: &quot;${dateFormatUTC}&quot;,&#xd;
+      &quot;selfServiceEmailMandate&quot;: false,&#xd;
+      &quot;email&quot;: &quot;${email}&quot;,&#xd;
+      &quot;globalThreadName&quot;: &quot;ANY&quot;,&#xd;
+      &quot;scheduledDateTimeInMillis&quot;: ${timestamp},&#xd;
+      &quot;currentDay&quot;: ${currentDay},&#xd;
+      &quot;currentMonth&quot;: ${currentMonth},&#xd;
+      &quot;currentYear&quot;: ${currentYear},&#xd;
+      &quot;globalSourceConnection&quot;: &quot;&quot;,&#xd;
+      &quot;globalTargetConnection&quot;: &quot;&quot;,&#xd;
+      &quot;jobSubmissionOrder&quot;: &quot;1&quot;,&#xd;
+      &quot;jobTitle&quot;: &quot;Conta Corrente PF Data Request&quot;,&#xd;
+      &quot;username&quot;: &quot;${chaveM}&quot;&#xd;
+   },&#xd;
+   &quot;dataDesign&quot;: {&#xd;
+      &quot;projectID&quot;: 2476,&#xd;
+      &quot;versionID&quot;: 2477&#xd;
+   },&#xd;
+   &quot;advancedToggleFlag&quot;: true&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Pega os valores do CPF" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String value = vars.get(&quot;cpf&quot;);
+
+vars.put(&quot;p_cpf&quot;, value.substring(0,value.length() - 3).replace(&quot;.&quot;,&quot;&quot;));
+vars.put(&quot;p_cpf_ctrl&quot;,value.substring(value.length() - 2));
+
+log.info(&quot;P_CPF = &quot; + value.substring(0,value.length() - 3).replace(&quot;.&quot;,&quot;&quot;));
+log.info(&quot;P_CPF-CTRL = &quot; + value.substring(value.length() - 2));
+</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">numeroJobId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.jobId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+            <stringProp name="Scope.variable"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">vars.put(&quot;statusJob&quot;,&quot;&quot;);</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+          <stringProp name="WhileController.condition">${__javaScript(&quot;${statusJob}&quot;.equals(&quot;Completed&quot;) || &quot;${statusJob}&quot;.equals(&quot;Failed&quot;) ? false : true)}
+</stringProp>
+        </WhileController>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">1500</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Verificando Job do Cadastro de Contas" enabled="true">
+            <intProp name="HTTPSampler.concurrentPool">6</intProp>
+            <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+            <stringProp name="HTTPSampler.port">${porta}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/TDMJobService/api/ca/v1/jobs/${numeroJobId}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">statusJob</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.status</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable"></stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">numeroJobIdAgenciaEConta</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.jobs[0].jobId</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+              <stringProp name="Scope.variable"></stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">$.status</stringProp>
+            <stringProp name="EXPECTED_VALUE">Failed</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">true</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Download Arquivo ZIP com o club" enabled="true">
+          <intProp name="HTTPSampler.concurrentPool">6</intProp>
+          <stringProp name="HTTPSampler.domain">portalmassa.net.bradesco.com.br</stringProp>
+          <stringProp name="HTTPSampler.port">${porta}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/TDMJobService/api/ca/v1/jobs/${numeroJobIdAgenciaEConta}/actions/downloadArtifact</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">${caminhoPastaDownload}/${numeroJobIdAgenciaEConta}_JOB_CADASTRO_AGENCIA_CONTA</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.successonly">true</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">true</boolProp>
+            <boolProp name="FileSaver.ignoreTC">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Preenche um txt com as agencias" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">import java.util.zip.ZipFile
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.file.Path
+import java.nio.file.StandardOpenOption
+
+def numeroJob = vars.get(&quot;numeroJobIdAgenciaEConta&quot;);
+
+String zipFilePath = &quot;${caminhoPastaDownload}/${numeroJob}_JOB_CADASTRO_AGENCIA_CONTA.zip&quot;
+
+String outputFilePath = &quot;${caminhoPastaDownload}/AgenciaEConta.txt&quot;
+File fileTxt = new File(outputFilePath);
+
+
+File zip = new File(zipFilePath);
+
+// Abrindo o arquivo ZIP
+def zipFile = new ZipFile(zip)
+
+StringBuilder outputData = new StringBuilder()
+if(!fileTxt.exists()){
+		outputData.append(&quot;cpf;club;agencia;conta\n&quot;);
+	}
+
+// Iterando sobre as entradas do arquivo ZIP
+zipFile.entries().each { entry -&gt;
+    log.info(&quot;Entry name: ${entry.name}&quot;)
+    // Lendo o conteúdo de cada entrada (opcional)
+    def inputStream = zipFile.getInputStream(entry)
+    def content = new String(inputStream.bytes)
+
+	def cpf = (content =~/CLIENTE_AGENCIA\s+CCGC_CPF\s+\d+\s+(\d+)/);
+	def digitoCpf = (content =~/CLIENTE_AGENCIA\s+CCTRL_CPF_CGC\s+\d+\s+(\d+)/);
+	def club = (content =~/PSSOA_OPER\s+CCLUB\s+\d+\s+(\d+)/);
+	def agencia = (content =~/TCTRL_MGRAC_CVIVE\s+CAG_BCRIA_CVIVE\s+\d+\s+(\d+)/);
+	def conta = (content =~/TCTRL_MGRAC_CVIVE\s+CCTA_BCRIA_CVIVE\s+\d+\s+(\d+)/);
+	def digitoConta = (content =~/TCTRL_MGRAC_CVIVE\s+CDIG_CTA_CVIVE\s+\d+\s+(\d+)/);
+	
+	
+	for(int i=0; i &lt; cpf.size(); i++){
+		String cpfValue = cpf[i][1];
+		String cpfFormatado = cpfValue.substring(0, 3) + &quot;.&quot; +
+                 cpfValue.substring(3, 6) + &quot;.&quot; +
+                 cpfValue.substring(6);
+                 
+		String digitoCpfValue = digitoCpf[i][1];
+		String clubValue = club[i][1];
+		String agenciaValue = agencia[i][1];
+		String contaValue = conta[i][1];
+		String digitoContaValue = digitoConta[i][1];
+
+		
+		outputData.append(&quot;${cpfFormatado}-${digitoCpfValue};${clubValue};${agenciaValue};${contaValue}-${digitoContaValue}\n&quot;);
+	}
+
+	log.info(&quot;LISTA -\n &quot; + outputData.toString())
+  
+}
+
+// Fechando o arquivo ZIP
+zipFile.close()
+zip.delete()
+
+if(fileTxt.exists()){
+	Files.write(Paths.get(outputFilePath), outputData.toString().getBytes(),StandardOpenOption.APPEND);
+}else{
+	Files.write(Paths.get(outputFilePath), outputData.toString().getBytes());
+}
+
+
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
